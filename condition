@@ -1,0 +1,104 @@
+Directory for saving data = data
+========== Parameters for coarse-graining using cylindrical segments ===========
+Length of cylindrical segments for actins(=i*7nm) = 20
+Number of binding sites on each segment in longitudinal and transverse directions = 20, 10
+======================= Parameters for network condition =======================
+Size of domain(x, y, z in um) = 20, 20, 0.1
+Periodic boundary condition(yes/no in x, y, z) = yes, yes, no
+If 2D network, specifiy the normal direction(no, x, y, or z) = z
+Duration of network formation(s) = 1.0
+Actin concentration(in uM) = 200
+ACPC density(R value) = 0
+ACPB density(R value) = 0.005
+Motor density(R value) = 0.01
+========================= Parameters for measurement ===========================
+Duration of simulation(s) = 30
+==================== Toggle the dynamic behaviors of actin =====================
+Allow the thermal fluctuation of actin filaments(yes/no) = yes
+Allow actin nucleation/assembly/disassembly during network formation(yes/no) = yes
+Allow nucleation of actins(yes/no) = yes
+Allow assembly of actins(yes/no) = yes
+Allow disassembly of actins(yes/no) = yes
+===================== Toggle the dynamic behaviors of ACP ======================
+Allow the thermal fluctuation of ACPs(yes/no) = yes
+Allow ACP unbinding/binding during network formation(yes/no) = yes
+Allow unbinding of inactive ACPs(yes/no) = yes
+Allow binding of monomeric ACPs(yes/no) = yes
+Allow unbinding of active ACPs(yes/no) = yes
+Allow binding of inactive ACPs(yes/no) = yes
+Allow implicit consideration of monomeric ACPs(yes/no) = yes
+==================== Toggle the dynamic behaviors of motor =====================
+Allow the thermal fluctuation of motors(yes/no) = yes
+Allow motor unbinding/binding during network formation(yes/no) = yes
+Allow motor walking during network formation(yes/no) = no
+Allow walking of motors(yes/no) = yes
+Allow self-assembly of motors into filaments(yes/no) = yes
+----------------------- If motors are independent dimers -----------------------
+Allow unbinding of inactive motors(yes/no) = yes
+Allow binding of monomeric motors(yes/no) = yes
+Allow unbinding of active motors(yes/no) = yes
+Allow binding of inactive motors(yes/no) = yes
+Allow implicit consideration of monomeric motors(yes/no) = no
+------------------------- If motors are self-assembled -------------------------
+Allow unbinding of motors(yes/no) = yes
+Allow binding of motors(yes/no) = yes
+If yes, allow binding of motors only when actin filaments are favorably aligned with motor filaments(yes/no) = yes
+Allow turnover of motor filaments(yes/no) = yes
+================ Parameters for the dynamic behaviors of actin =================
+k for actin nucleation(1/uM s) = 0.001
+k for actin assembly at barbed and pointed ends(1/uM s) = 5, 0
+k for actin disassembly at barbed and pointed ends(1/s) = 0, 50
+Factor for varying disassembly rate of actin with ACPs or motors = 1.0
+================= Parameters for the dynamic behaviors of ACP ==================
+k for ACP binding(k=i*k_0) = 1.0
+k0 and x for ACP slip unbinding = 0.115, 1.04e-10
+k0 and x for ACP catch unbinding = 0, -5e-9
+================ Parameters for the dynamic behaviors of motor =================
+k for motor binding(k=i*k_0) = 1.0
+k0 for motor unbinding and walking(k0=i*k0_0) = 1.0
+Number of heads which each motor arm represents = 4
+Transition rates between mechanochemical states in each head(k01, k10, k12, k21, k20 in 1/s) = 40, 2, 1000, 1000, 20
+------------------------- If motors are self-assembled -------------------------
+Average number of motors per each self-assembled structure = 4
+k for motor assembly(in 1/s) = 1e2
+k for motor turnover(in 1/s) = 1e1
+======== Adjustment for rates of the dynamic behaviors of actin and ABP ========
+During network formation(i*k) = 100
+=============== Parameters for the mechanical behaviors of actin ===============
+Strength of repulsive forces between actin filaments(Kr=i*Kr_0) = 1.0
+Bending stiffness of actin filaments(Kb=i*Kb_0) = 1.0
+Extensional stiffness of actin filaments(Ks=i*Ks_0) = 1.0
+================ Parameters for the mechanical behaviors of ABP ================
+Strength of repulsive forces between actin and ABP and between ABPs(Kr=i*Kr_0) = 0
+Bending stiffness which maintains an assigned angle between two arms of ACPC, ACPB, and motor(Kb=i*Kb_0) = 1.0, 1.0, 1.0
+Bending stiffness which maintains 90 deg between the axis of a filament and the arm of ACPC, ACPB, and motor(Kb=i*Kb_0) = 0, 0, 0
+Extensional stiffness of ACPC, ACPB, and motor(Ks=i*Ks_0) = 1.0, 1.0, 1.0
+======================== Parameters for data recording =========================
+Period of recording Output and Progress(s) = 0.1
+----------------------------- Structural information ---------------------------
+Period of recording Config(in s, -1 for deactivation) = 1
+Period of recording structural information for visualization via VMD(in s, -1 for deactivation) = 1.0
+Number of VMD files(multiple/single) = single
+Show the boundaries of a network drawn by VMD(yes/no) = yes
+Record information for coloring a network drawn by VMD(yes/no) = yes
+Lower and upper limits of forces for coloring(in pN) = 0, 100
+Period of recording length of actin filaments(in s, -1 for deactivation) = 1.0
+--------------------------- Force, stress, and energy --------------------------
+Period of recording longitudinal forces of ABPs(in s, -1 for deactivation) = 1
+Period of recording mechanical energy(in s, -1 for deactivation) = 0.1
+--------------------- Dynamic behaviors of actin and ABPs ----------------------
+Period of recording ABP unbinding(in s, -1 for deactivation) = -1
+Period of recording ABP binding(in s, -1 for deactivation) = -1
+Period of recording ABP turnover(in s, -1 for deactivation) = -1
+---------------------------------- Miscellany ----------------------------------
+Period of recording information in unit of individual elements, filament segments, and filaments(in s, -1 for deactivation) = 1.0
+========================== Parameters for rho dynamics =========================
+Allow rho activation(in s, -1 for deactivation) = 35
+Number of regions for rho activation in x, y, and z directions = 4, 4, 1
+Number of regions activated by rho at once = 1
+Delay and duration of motor activation(in s) = 5, 15
+Delay and duration of altered actin polymerization(in s) = 0, 10
+Density of barbed ends for altered actin polymerization(0-1) = 0.000125
+Factor for actin polymerization due to rho activation = 1, 8
+Portion of activable motors = 1
+Enhancement of assembly rate of activated motors = 1000
